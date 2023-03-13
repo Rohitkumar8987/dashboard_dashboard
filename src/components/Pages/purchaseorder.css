@@ -1,0 +1,286 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+/* body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+
+} */
+form{
+    padding: 30px;
+    max-height: fit-content;
+    max-height: -moz-fit-content;
+    min-height: 840px;
+}
+.container{
+    position: relative;
+    max-width: 250px;
+    height: 80%;
+    padding: 40px;
+    margin: 0 28px;
+    box-shadow: 0 15px 20px #ABB2B9;
+}
+
+h1{
+   font-size: 26px; 
+   font-weight: 600;
+   text-align: left;
+   color: rgb(17, 16, 16) ;
+   padding-bottom:8px ;
+  
+}
+.hr{
+    color: #ABB2B9;
+    width: 100%;
+}
+
+.content{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px 0;
+
+}
+.input-box, .input-box-text{
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+    padding-bottom:15px ;
+}
+
+
+  .input-box_o {
+    height: 40px;
+    width: 100%;
+    
+    outline: none;
+}
+.input-box_o select{
+    margin-top: 5px;
+    height: 35px;
+width: 100%;
+padding: 0 8px ;
+border-radius: 5px;
+border: 1px solid rgb(105, 102, 102);
+outline: none;
+}
+ .items{
+    margin-top: 40px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+
+    font-size: 20px;
+    
+}
+.input-box_p label{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+
+}
+
+
+.input-box_p select{
+    width: 60%;
+    height: 30px;
+    
+}
+
+
+
+
+
+.input-box_op{
+    width: 440%;
+    height: 10px;
+    position: relative;
+   
+    display: flex;
+}
+.input-box_op .input-box_p{
+    
+    height: 35px;
+margin-top: 5px;
+width: 100%;
+padding: 0 10px ;
+border-radius: 3px;
+
+outline: none;
+}
+
+
+
+.input-box input{
+height: 40px;
+margin-top: 5px;
+width: 95%;
+padding: 0 10px ;
+border-radius: 5px;
+border: 1px solid rgb(105, 102, 102);
+outline: none;
+}
+.input-box-po label{
+    margin-left: -90px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+}
+
+.input-box-po select{
+   margin-left: -90px;
+   margin-top: 5px;
+    
+    justify-items: center;
+    justify-content: space-between;
+width: 90px;
+height: 30px;
+border-radius: 6px solid #ABB2B9;
+}
+.input-box_l label{
+    margin-left: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+}  
+
+
+.input-box_l input{
+    width: 90%;
+    margin-top: 5px;
+  
+    height: 30px;
+    margin-left: 30px;
+    border-radius: 6px solid #ABB2B9;
+}
+
+
+.more_btn{
+   
+    height: 50px;
+    width: 180px;
+    position: absolute;
+    top: 72%;
+    left: 20%;
+    background: #fff;
+    font-weight: 700;
+    transform: translate(-50%,-50%);
+   
+    border-radius: 5px ;
+    overflow: hidden;
+    cursor: pointer;
+}
+.more_btn:hover {
+    background: #28589a;
+}
+.more_btn:hover::after{
+    top: 50%;
+  
+    color: #fff;
+    font-size: 16px;
+
+    border: 1px solid #28589a;
+    border-radius: 5px;
+
+}
+
+.more_btn::before{
+content: '+ Add more';
+top: 50%;
+left: 50%;
+font-size: 16px;
+    color: #28589a;
+transform: translate(-50%,-50%);
+position: absolute;
+
+cursor: pointer;
+}
+.more_btn::after{
+content: '+ icon Left';
+font-size: 20px;
+top: 50%;
+left: 50%;
+color: #fff;
+text-align: center;
+transform: translate(-50%,-50%);
+position: absolute;
+top: 120%;
+cursor: pointer;
+
+}
+.more_btn:hover::before{
+    top: -50%;
+}
+
+
+.button-container button{
+    float: right;
+    display: block;
+    font-size: 13px;
+    color: #28589a ;
+    font-weight: bold;
+    background-color:white;
+    border: none;
+    padding-right: 10px;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0,0.25);
+   
+}
+
+.button-container button:hover{
+    background-color: #28589a;
+    color: white;
+
+}
+   
+    button {
+        padding: 8px;
+        margin-top: 10px;
+        cursor: pointer;
+        margin-right: -60px;
+    }
+    .button-container .btn{
+        font-size: 20px;
+        padding: 100px;
+        /* width: 600px; */
+        float: right;
+
+    }
+    
+    .btn .btn-o{
+        /* padding-right:73px; */
+    }
+
+    
+
+    .close {
+        position: absolute;
+        top: 30px;
+        right: 20px;
+        color: #ABB2B9;
+        cursor: pointer;
+    }
+
+    .btn .save {
+        color: #fff;
+        background: #28589a;
+    }
+
+
+
+
+
+
+
+
+

@@ -1,20 +1,21 @@
 import React, {useState} from 'react'
 import {RiSearchLine} from 'react-icons/ri'
-import { Table } from 'antd'
+import { Table, Radio } from 'antd'
 
 export default function Customers() {
-  const [selected, setSelected] = useState('all')
+  const [selected, setSelected] = useState('all');
+  const [selectedRowKeys, setSelectedRowKeys] = useState([]);
 
   const handleSelected = (value) => {
     setSelected(value)
   }
 
   const menu = [
-    {id: 1, name: 'All', codename: 'all' },
-    {id: 2, name: 'Business', codename: 'business' },
-    {id: 3, name: 'Builder Referral', codename: 'builder' },
-    {id: 4, name: 'Store/Walking', codename: 'walking' },
-    {id: 5, name: 'Store/Direct', codename: 'direct' }
+    {id: 1, name: 'All 234', codename: 'all' },
+    {id: 2, name: 'Business 234', codename: 'business' },
+    {id: 3, name: 'Builder Referral 234', codename: 'builder' },
+    {id: 4, name: 'Store/Walking 234', codename: 'walking' },
+    {id: 5, name: 'Store/Direct 234', codename: 'direct' }
   ]
   const data = []
   for (let i = 0; i < 46; i++) {
@@ -27,7 +28,8 @@ export default function Customers() {
         address: '841 Lakeshore Dr Port Orford, Oregon',
         type: 'Business',
         salesperson: 'George James',
-        notes: 1
+        notes: 1,
+        action: '...'
       },
     )
   }
@@ -68,7 +70,16 @@ export default function Customers() {
       dataIndex: 'notes',
       key: 'notes',
     },
+    {
+      dataIndex: 'action',
+      key: 'action',
+    },
   ]
+
+  const onSelectChange = (pagination, filters, sorter) => {
+    console.log('selectedRowKeys changed: ', pagination, filters, sorter);
+    setSelectedRowKeys(newSelectedRowKeys);
+  };
 
   return (
     <>
@@ -96,7 +107,7 @@ export default function Customers() {
       <div className='p-3 bg-white'>
         <span className="fs-5 fw-bold">All Customers</span>
       </div>
-      <Table dataSource={data} columns={columns}/>
+      <Table dataSource={data} columns={columns} onChange= {onSelectChange}/>
       </div>
       }
       {selected === "business" && <h1>Business</h1>}
